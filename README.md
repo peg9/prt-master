@@ -3,4 +3,32 @@
 Copie du skill Claude `prompt-master` de nidhinjs (v1.8.2, licence MIT).
 Source : https://github.com/nidhinjs/prompt-master
 
-Pour l'utiliser dans un projet, copier `SKILL.md` et `references/` dans `.claude/skills/prompt-master/`.
+## Utilisation dans un seul projet
+
+Copier `SKILL.md` et `references/` dans `.claude/skills/prompt-master/` du projet.
+
+## Utilisation dans tous les projets (portée personnelle)
+
+Cloner ce dépôt directement dans le dossier des skills personnels de Claude Code. Le nom du dossier doit être `prompt-master` : c'est lui qui donne la commande `/prompt-master`.
+
+Windows (PowerShell) :
+
+```
+git clone https://github.com/peg9/prt-master "$env:USERPROFILE\.claude\skills\prompt-master"
+```
+
+macOS ou Linux :
+
+```
+git clone https://github.com/peg9/prt-master ~/.claude/skills/prompt-master
+```
+
+Ouvrir ensuite une nouvelle session Claude Code. Mise à jour :
+
+```
+git -C <dossier du skill> pull
+```
+
+Limite : selon la documentation de Claude Code, un skill personnel (`~/.claude/skills/`) est disponible dans tous les projets de la machine, mais pas dans les sessions cloud ni Cowork. Pour ces sessions, copier le skill dans le dépôt concerné, sous `.claude/skills/prompt-master/`.
+
+Emplacement documenté : https://code.claude.com/docs/en/skills
